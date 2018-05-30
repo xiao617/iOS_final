@@ -1,0 +1,593 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D4543F3C20BE351A00D9F242 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4543F3B20BE351A00D9F242 /* AppDelegate.swift */; };
+		D4543F3E20BE351A00D9F242 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = D4543F3D20BE351A00D9F242 /* art.scnassets */; };
+		D4543F4020BE351A00D9F242 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4543F3F20BE351A00D9F242 /* ViewController.swift */; };
+		D4543F4320BE351A00D9F242 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4543F4120BE351A00D9F242 /* Main.storyboard */; };
+		D4543F4520BE351B00D9F242 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4543F4420BE351B00D9F242 /* Assets.xcassets */; };
+		D4543F4820BE351B00D9F242 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4543F4620BE351B00D9F242 /* LaunchScreen.storyboard */; };
+		D4543F5320BE351B00D9F242 /* Pikachu_VolleyBallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4543F5220BE351B00D9F242 /* Pikachu_VolleyBallTests.swift */; };
+		D4543F5E20BE351B00D9F242 /* Pikachu_VolleyBallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4543F5D20BE351B00D9F242 /* Pikachu_VolleyBallUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D4543F4F20BE351B00D9F242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4543F3020BE351900D9F242 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4543F3720BE351A00D9F242;
+			remoteInfo = Pikachu_VolleyBall;
+		};
+		D4543F5A20BE351B00D9F242 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D4543F3020BE351900D9F242 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D4543F3720BE351A00D9F242;
+			remoteInfo = Pikachu_VolleyBall;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D4543F3820BE351A00D9F242 /* Pikachu_VolleyBall.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pikachu_VolleyBall.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4543F3B20BE351A00D9F242 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D4543F3D20BE351A00D9F242 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		D4543F3F20BE351A00D9F242 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D4543F4220BE351A00D9F242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D4543F4420BE351B00D9F242 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D4543F4720BE351B00D9F242 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D4543F4920BE351B00D9F242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4543F4E20BE351B00D9F242 /* Pikachu_VolleyBallTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pikachu_VolleyBallTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4543F5220BE351B00D9F242 /* Pikachu_VolleyBallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pikachu_VolleyBallTests.swift; sourceTree = "<group>"; };
+		D4543F5420BE351B00D9F242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D4543F5920BE351B00D9F242 /* Pikachu_VolleyBallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Pikachu_VolleyBallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4543F5D20BE351B00D9F242 /* Pikachu_VolleyBallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pikachu_VolleyBallUITests.swift; sourceTree = "<group>"; };
+		D4543F5F20BE351B00D9F242 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D4543F3520BE351A00D9F242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4543F4B20BE351B00D9F242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4543F5620BE351B00D9F242 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D4543F2F20BE351900D9F242 = {
+			isa = PBXGroup;
+			children = (
+				D4543F3A20BE351A00D9F242 /* Pikachu_VolleyBall */,
+				D4543F5120BE351B00D9F242 /* Pikachu_VolleyBallTests */,
+				D4543F5C20BE351B00D9F242 /* Pikachu_VolleyBallUITests */,
+				D4543F3920BE351A00D9F242 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D4543F3920BE351A00D9F242 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D4543F3820BE351A00D9F242 /* Pikachu_VolleyBall.app */,
+				D4543F4E20BE351B00D9F242 /* Pikachu_VolleyBallTests.xctest */,
+				D4543F5920BE351B00D9F242 /* Pikachu_VolleyBallUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D4543F3A20BE351A00D9F242 /* Pikachu_VolleyBall */ = {
+			isa = PBXGroup;
+			children = (
+				D4543F3B20BE351A00D9F242 /* AppDelegate.swift */,
+				D4543F3D20BE351A00D9F242 /* art.scnassets */,
+				D4543F3F20BE351A00D9F242 /* ViewController.swift */,
+				D4543F4120BE351A00D9F242 /* Main.storyboard */,
+				D4543F4420BE351B00D9F242 /* Assets.xcassets */,
+				D4543F4620BE351B00D9F242 /* LaunchScreen.storyboard */,
+				D4543F4920BE351B00D9F242 /* Info.plist */,
+			);
+			path = Pikachu_VolleyBall;
+			sourceTree = "<group>";
+		};
+		D4543F5120BE351B00D9F242 /* Pikachu_VolleyBallTests */ = {
+			isa = PBXGroup;
+			children = (
+				D4543F5220BE351B00D9F242 /* Pikachu_VolleyBallTests.swift */,
+				D4543F5420BE351B00D9F242 /* Info.plist */,
+			);
+			path = Pikachu_VolleyBallTests;
+			sourceTree = "<group>";
+		};
+		D4543F5C20BE351B00D9F242 /* Pikachu_VolleyBallUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D4543F5D20BE351B00D9F242 /* Pikachu_VolleyBallUITests.swift */,
+				D4543F5F20BE351B00D9F242 /* Info.plist */,
+			);
+			path = Pikachu_VolleyBallUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D4543F3720BE351A00D9F242 /* Pikachu_VolleyBall */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4543F6220BE351B00D9F242 /* Build configuration list for PBXNativeTarget "Pikachu_VolleyBall" */;
+			buildPhases = (
+				D4543F3420BE351A00D9F242 /* Sources */,
+				D4543F3520BE351A00D9F242 /* Frameworks */,
+				D4543F3620BE351A00D9F242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pikachu_VolleyBall;
+			productName = Pikachu_VolleyBall;
+			productReference = D4543F3820BE351A00D9F242 /* Pikachu_VolleyBall.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D4543F4D20BE351B00D9F242 /* Pikachu_VolleyBallTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4543F6520BE351B00D9F242 /* Build configuration list for PBXNativeTarget "Pikachu_VolleyBallTests" */;
+			buildPhases = (
+				D4543F4A20BE351B00D9F242 /* Sources */,
+				D4543F4B20BE351B00D9F242 /* Frameworks */,
+				D4543F4C20BE351B00D9F242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4543F5020BE351B00D9F242 /* PBXTargetDependency */,
+			);
+			name = Pikachu_VolleyBallTests;
+			productName = Pikachu_VolleyBallTests;
+			productReference = D4543F4E20BE351B00D9F242 /* Pikachu_VolleyBallTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D4543F5820BE351B00D9F242 /* Pikachu_VolleyBallUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D4543F6820BE351B00D9F242 /* Build configuration list for PBXNativeTarget "Pikachu_VolleyBallUITests" */;
+			buildPhases = (
+				D4543F5520BE351B00D9F242 /* Sources */,
+				D4543F5620BE351B00D9F242 /* Frameworks */,
+				D4543F5720BE351B00D9F242 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D4543F5B20BE351B00D9F242 /* PBXTargetDependency */,
+			);
+			name = Pikachu_VolleyBallUITests;
+			productName = Pikachu_VolleyBallUITests;
+			productReference = D4543F5920BE351B00D9F242 /* Pikachu_VolleyBallUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D4543F3020BE351900D9F242 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+				ORGANIZATIONNAME = "廖莉祺";
+				TargetAttributes = {
+					D4543F3720BE351A00D9F242 = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					D4543F4D20BE351B00D9F242 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = D4543F3720BE351A00D9F242;
+					};
+					D4543F5820BE351B00D9F242 = {
+						CreatedOnToolsVersion = 9.3.1;
+						TestTargetID = D4543F3720BE351A00D9F242;
+					};
+				};
+			};
+			buildConfigurationList = D4543F3320BE351900D9F242 /* Build configuration list for PBXProject "Pikachu_VolleyBall" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D4543F2F20BE351900D9F242;
+			productRefGroup = D4543F3920BE351A00D9F242 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D4543F3720BE351A00D9F242 /* Pikachu_VolleyBall */,
+				D4543F4D20BE351B00D9F242 /* Pikachu_VolleyBallTests */,
+				D4543F5820BE351B00D9F242 /* Pikachu_VolleyBallUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D4543F3620BE351A00D9F242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4543F3E20BE351A00D9F242 /* art.scnassets in Resources */,
+				D4543F4820BE351B00D9F242 /* LaunchScreen.storyboard in Resources */,
+				D4543F4520BE351B00D9F242 /* Assets.xcassets in Resources */,
+				D4543F4320BE351A00D9F242 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4543F4C20BE351B00D9F242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4543F5720BE351B00D9F242 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4543F3420BE351A00D9F242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4543F4020BE351A00D9F242 /* ViewController.swift in Sources */,
+				D4543F3C20BE351A00D9F242 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4543F4A20BE351B00D9F242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4543F5320BE351B00D9F242 /* Pikachu_VolleyBallTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4543F5520BE351B00D9F242 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4543F5E20BE351B00D9F242 /* Pikachu_VolleyBallUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D4543F5020BE351B00D9F242 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4543F3720BE351A00D9F242 /* Pikachu_VolleyBall */;
+			targetProxy = D4543F4F20BE351B00D9F242 /* PBXContainerItemProxy */;
+		};
+		D4543F5B20BE351B00D9F242 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D4543F3720BE351A00D9F242 /* Pikachu_VolleyBall */;
+			targetProxy = D4543F5A20BE351B00D9F242 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D4543F4120BE351A00D9F242 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4543F4220BE351A00D9F242 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D4543F4620BE351B00D9F242 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D4543F4720BE351B00D9F242 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D4543F6020BE351B00D9F242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D4543F6120BE351B00D9F242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D4543F6320BE351B00D9F242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSL2NF846M;
+				INFOPLIST_FILE = Pikachu_VolleyBall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cx617.Pikachu-VolleyBall";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D4543F6420BE351B00D9F242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSL2NF846M;
+				INFOPLIST_FILE = Pikachu_VolleyBall/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cx617.Pikachu-VolleyBall";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D4543F6620BE351B00D9F242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSL2NF846M;
+				INFOPLIST_FILE = Pikachu_VolleyBallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cx617.Pikachu-VolleyBallTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pikachu_VolleyBall.app/Pikachu_VolleyBall";
+			};
+			name = Debug;
+		};
+		D4543F6720BE351B00D9F242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSL2NF846M;
+				INFOPLIST_FILE = Pikachu_VolleyBallTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cx617.Pikachu-VolleyBallTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pikachu_VolleyBall.app/Pikachu_VolleyBall";
+			};
+			name = Release;
+		};
+		D4543F6920BE351B00D9F242 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSL2NF846M;
+				INFOPLIST_FILE = Pikachu_VolleyBallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cx617.Pikachu-VolleyBallUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pikachu_VolleyBall;
+			};
+			name = Debug;
+		};
+		D4543F6A20BE351B00D9F242 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DSL2NF846M;
+				INFOPLIST_FILE = Pikachu_VolleyBallUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "cx617.Pikachu-VolleyBallUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pikachu_VolleyBall;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D4543F3320BE351900D9F242 /* Build configuration list for PBXProject "Pikachu_VolleyBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4543F6020BE351B00D9F242 /* Debug */,
+				D4543F6120BE351B00D9F242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4543F6220BE351B00D9F242 /* Build configuration list for PBXNativeTarget "Pikachu_VolleyBall" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4543F6320BE351B00D9F242 /* Debug */,
+				D4543F6420BE351B00D9F242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4543F6520BE351B00D9F242 /* Build configuration list for PBXNativeTarget "Pikachu_VolleyBallTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4543F6620BE351B00D9F242 /* Debug */,
+				D4543F6720BE351B00D9F242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D4543F6820BE351B00D9F242 /* Build configuration list for PBXNativeTarget "Pikachu_VolleyBallUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D4543F6920BE351B00D9F242 /* Debug */,
+				D4543F6A20BE351B00D9F242 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D4543F3020BE351900D9F242 /* Project object */;
+}
