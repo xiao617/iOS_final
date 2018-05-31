@@ -18,6 +18,7 @@
 		D47C8F6320B463A600568CAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D47C8F6120B463A600568CAE /* LaunchScreen.storyboard */; };
 		D47C8F6E20B463A600568CAE /* BasketballTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C8F6D20B463A600568CAE /* BasketballTests.swift */; };
 		D47C8F7920B463A600568CAE /* BasketballUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47C8F7820B463A600568CAE /* BasketballUITests.swift */; };
+		D47E6ABB20BFA45800740850 /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D47E6ABA20BFA45800740850 /* ARViewController.swift */; };
 		D4ADEC9720B511DD0072C8D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4ADEC9620B511DC0072C8D7 /* Main.storyboard */; };
 		D4FEE88920BE385D0005D5D1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D4FEE88820BE385D0005D5D1 /* GoogleService-Info.plist */; };
 		D4FEE88D20BEABB60005D5D1 /* UserTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4FEE88C20BEABB60005D5D1 /* UserTable.swift */; };
@@ -62,6 +63,7 @@
 		D47C8F7420B463A600568CAE /* BasketballUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BasketballUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D47C8F7820B463A600568CAE /* BasketballUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketballUITests.swift; sourceTree = "<group>"; };
 		D47C8F7A20B463A600568CAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D47E6ABA20BFA45800740850 /* ARViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		D4ADEC9620B511DC0072C8D7 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D4FEE88820BE385D0005D5D1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D4FEE88C20BEABB60005D5D1 /* UserTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTable.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 				D4FEE88820BE385D0005D5D1 /* GoogleService-Info.plist */,
 				D46A4C6620BDB26D00E362E7 /* image */,
 				D4ADEC9620B511DC0072C8D7 /* Main.storyboard */,
+				D47E6ABA20BFA45800740850 /* ARViewController.swift */,
 				D47C8F5620B463A500568CAE /* AppDelegate.swift */,
 				D47C8F5820B463A500568CAE /* art.scnassets */,
 				D47C8F5F20B463A600568CAE /* Assets.xcassets */,
@@ -407,6 +410,7 @@
 				D46A4C6520BD6A2600E362E7 /* ViewController.swift in Sources */,
 				D4FEE88D20BEABB60005D5D1 /* UserTable.swift in Sources */,
 				D47C8F5720B463A500568CAE /* AppDelegate.swift in Sources */,
+				D47E6ABB20BFA45800740850 /* ARViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

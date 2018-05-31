@@ -13,6 +13,8 @@ import FirebaseStorage
 struct UploadInfo {
     var ConnectState: Bool?
     var Character: Int?
+    var Connecter: String?
+    var Waiting: Bool?
 }
 
 class ViewController: UIViewController {
@@ -25,7 +27,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        UserDefaults.standard.set([], forKey: "namelist")
         //Firebase Database
         ref = Database.database().reference()
         
@@ -50,7 +52,7 @@ class ViewController: UIViewController {
     
     @IBOutlet var UserEnterName: UITextField!
     func initDatabase() {
-        let UploadUserData = ["Character": 0, "ConnectState": true] as [String : Any]
+        let UploadUserData = ["Character": 0, "ConnectState": true, "Connecter": "" , "Waiting": false] as [String : Any]
         
         //Upload User Data to Firebase
         ref.child("UserList").child("Default").setValue(UploadUserData)
@@ -69,7 +71,7 @@ class ViewController: UIViewController {
         UserName = UserEnterName.text
         
         //Use dict to save info
-        let UploadUserData = ["Character": 0, "ConnectState": false] as [String : Any]
+        let UploadUserData = ["Character": 0, "ConnectState": false,"Connecter": "" , "Waiting": false ] as [String : Any]
         
         //Upload User Data to Firebase
         ref.child("UserList").child(UserName!).setValue(UploadUserData)
@@ -77,7 +79,7 @@ class ViewController: UIViewController {
         
         
         UserInFirebase.append(UserName!)
-        print("uF",UserInFirebase)
+        //print("uF",UserInFirebase)
         ref.child("UserName").updateChildValues(["Name":UserInFirebase])
         
         

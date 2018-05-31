@@ -70,17 +70,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbp-tE-gva">
-                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="KUw-gX-vnT"/>
-                                </items>
-                            </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="YYn-V8-SOh">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="PJn-9k-cp6">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="PJn-9k-cp6">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="Cell" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PJn-9k-cp6" id="Hzc-Pe-gbP">
@@ -90,6 +84,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hbp-tE-gva">
+                                <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Title" id="KUw-gX-vnT"/>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -114,14 +114,11 @@
         <!--View Controller-->
         <scene sceneID="MJm-Hg-PpE">
             <objects>
-                <viewController id="fGH-GV-xh7" sceneMemberID="viewController">
+                <viewController id="fGH-GV-xh7" customClass="ARViewController" customModule="Basketball" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3n9-8F-LZM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rzv-IQ-KbE">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
-                            </arscnView>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1mj-jR-JF0">
                                 <rect key="frame" x="297" y="38" width="97" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -156,13 +153,6 @@
                             </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="e0i-qK-R6R" firstAttribute="trailing" secondItem="Rzv-IQ-KbE" secondAttribute="trailing" id="1et-2J-Vx3"/>
-                            <constraint firstItem="Rzv-IQ-KbE" firstAttribute="top" secondItem="e0i-qK-R6R" secondAttribute="top" id="eU7-Y8-HxO"/>
-                            <constraint firstItem="Rzv-IQ-KbE" firstAttribute="leading" secondItem="e0i-qK-R6R" secondAttribute="leading" id="rmR-r3-EoG"/>
-                            <constraint firstItem="Rzv-IQ-KbE" firstAttribute="top" secondItem="e0i-qK-R6R" secondAttribute="top" id="uGj-GS-6aR"/>
-                            <constraint firstItem="e0i-qK-R6R" firstAttribute="bottom" secondItem="Rzv-IQ-KbE" secondAttribute="bottom" id="uLw-eu-vsz"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="e0i-qK-R6R"/>
                     </view>
                 </viewController>

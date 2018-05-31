@@ -11,97 +11,168 @@ import FirebaseDatabase
 import FirebaseStorage
 class UserTable: UIViewController ,UITableViewDataSource, UITableViewDelegate{
     
-    
     @IBOutlet var usertableview: UITableView!
-    
+    var waitcheck = false
     var ref: DatabaseReference!
+    var initloadstat = false
     //Keep self username
-    let Username = UserDefaults.standard.object(forKey: "UserName")
-    
+    let Username = UserDefaults.standard.object(forKey: "UserName") as! String
     //Set timer to refresh
     var timer: Timer!
     var username = [String]()
     var list = [String]()
+    var inuser = [String: Bool]()
+    var chosen = ""
+    var bechosen = false
+    var alertcontroller: UIAlertController!
     override func viewDidLoad() {
         super.viewDidLoad()
-        ref = Database.database().reference()
-        //ref.keepSynced(true)
         usertableview.dataSource = self
         usertableview.delegate = self
-        //timer = Timer.scheduledTimer(timeInterval: 1.0 , target: self, selector: "refreshcycle", userInfo: nil, repeats: true)
-        //loadusername()
+        ref = Database.database().reference()
+        loaddata()
+        
+        let swifttorefresh = UISwipeGestureRecognizer(target: self, action: #selector(self.loaddata))
+        swifttorefresh.direction = .down
+        ref.child("UserList").child(Username).observe( .value, with: {(Snapshot) in
+            
+            let tvv = Snapshot.value as! NSDictionary
+            let State = tvv["ConnectState"] as! Bool
+            let Connecter = tvv["Connecter"] as! String
+            let Waitt = tvv["Waiting"] as! Bool
+            print(self.waitcheck,self.chosen,Connecter,Waitt,State)
+            if(self.waitcheck==true && self.chosen == Connecter){
+                print("$1")
+                self.alertcontroller.dismiss(animated: true, completion: nil)
+                //TODO: To next page
+            }else if(self.waitcheck && !Waitt){
+                print("$5")
+                self.alertcontroller.dismiss(animated: true, completion: nil)
+                self.chosen = ""
+                self.waitcheck = false
+            }
+            if(!self.waitcheck){
+                print("$2")
+                if(Waitt){
+                    print("$3")
+                    self.alertcontroller.dismiss(animated: true, completion: nil)
+                }
+                if(State){
+                    print("$4")
+                    self.bechosen = true
+                    let connecter = tvv["Connecter"] as! String
+                    self.alertcontroller = UIAlertController(title: "連線請求", message: connecter+",想跟您進行遊戲", preferredStyle: .alert)
+                    let okbut = UIAlertAction(
+                    title: "確認", style: .default, handler: {(action: UIAlertAction!) -> Void in
+                        self.ref.child("UserList").child(connecter).updateChildValues(["Connecter":self.Username, "ConnectState": true])
+                        //TODO: To next page
+                    })
+                    let refbut = UIAlertAction(
+                        title: "拒絕", style: .default, handler: {(action: UIAlertAction!) -> Void in
+                        self.ref.child("UserList").child(self.Username).updateChildValues(["ConnectState": false,"Connecter": ""])
+                        self.ref.child("UserList").child(connecter).updateChildValues(["Waiting":false])
+                    })
+                    self.alertcontroller.addAction(okbut)
+                    self.alertcontroller.addAction(refbut)
+                    self.present(self.alertcontroller, animated: true)
+                    print("get news")
+                    }
+                else{
+                    print("$6")
+                    if(self.bechosen){
+                        print("$7")
+                        self.alertcontroller.dismiss(animated: true, completion: nil)
+                        self.bechosen = false
+                    }
+                }
+                
+            }
+                
+            //}
+            /*
+            else{
+                let connect
+            }*/
+        })
+    }
+    @objc func loaddata() {
+        ref.child("UserName").observe( .value , with: { (Snapshot) in
+            let vv = Snapshot.value as! NSDictionary
+            //self.usertableview.reloadData()
+            self.username = vv["Name"] as! [String] ?? [String]()
+            
+                for name in self.username{
+                    if(name == "Default" || name == self.Username){
+                        var ind = self.username.index(of: name)
+                        
+                        self.username.remove(at: ind!)
+                        DispatchQueue.main.async{
+                            self.usertableview.reloadData()
+                        }
+                    }
+                    else{
+                        self.ref.child("UserList").child(name).observeSingleEvent(of: .value, with: {
+                            (Snapshot) in
+                            let tvv = Snapshot.value as! NSDictionary
+                            let State = tvv["ConnectState"] as! Bool
+                            let Waitt = tvv["Waiting"] as! Bool
+                            if(State || Waitt){
+                                print(name)
+                                var ind = self.username.index(of: name)
+                                self.username.remove(at: ind!)
+                                DispatchQueue.main.async{
+                                    self.usertableview.reloadData()
+                                }
+                            }
+                        })
+                    }
+                }
+        
+        
+            
+        })
         
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        ref.child("UserName").observeSingleEvent(of: .value , with: { (Snapshot) in
-            let vv = Snapshot.value as! NSDictionary
-            self.usertableview.beginUpdates()
-            self.username = vv["Name"] as! [String] ?? [String]()
-            //DispatchQueue.main.async {
-            //    self.usertableview.reloadData()
-            //}
-            self.usertableview.endUpdates()
-            
-        })
-        //self.usertableview.reloadData()
-        
-        //DispatchQueue.main.async {
-        //    self.usertableview.reloadData()
-        //}
-        print("it",self.username)
+        //availcheck()
     }
-    func loadusername(){
-        ref.child("UserName").observeSingleEvent(of: .value , with: { (Snapshot) in
-            let vv = Snapshot.value as! NSDictionary
-            self.username = vv["Name"] as! [String] ?? [String]()
-            //self.UserTable.reloadData()
-            //print(self.username)
-            //self.usertableview.reloadData()
-            /*
-            DispatchQueue.main.async {
-                self.usertableview.reloadData()
-            }*/
-        })
-        print(username)
-        
-    }
-    //func refreshcycle() {
     
-    //}
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     // MARK: - Table view data source
-    
     func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.chosen = username[indexPath.row]
+        print(self.chosen)
+        ref.child("UserList").child(self.chosen).updateChildValues(["ConnectState":true,"Connecter": self.Username])
+        self.waitcheck = true
+        ref.child("UserList").child(self.Username).updateChildValues(["Waiting":true])
+        self.alertcontroller = UIAlertController(title: "等待連線", message: "等待與"+chosen+"進行連線", preferredStyle: .alert)
+        let refbut = UIAlertAction(
+            title: "取消", style: .destructive, handler: {(action: UIAlertAction!) -> Void in
+                self.ref.child("UserList").child(self.chosen).updateChildValues(["ConnectState": false,"Connecter": ""])
+                self.ref.child("UserList").child(self.Username).updateChildValues(["Waiting": false])
+                self.waitcheck = false
+        })
+        self.alertcontroller.addAction(refbut)
+        self.present(self.alertcontroller, animated: true)
+        
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        print(username.count)
         return username.count
     }
     
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        
-        // Configure the cell...
-        /*
-         var username = [String]()
-         ref.child("UserName").observeSingleEvent(of: .value , with: { (Snapshot) in
-         let vv = Snapshot.value as! NSDictionary
-         username = vv["Name"] as! [String] ?? [String]()
-         })
-         for name in username{
-         
-         }*/
+        cell.textLabel?.text = username[indexPath.row]
         return cell
     }
     
