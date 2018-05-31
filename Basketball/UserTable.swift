@@ -45,6 +45,7 @@ class UserTable: UIViewController ,UITableViewDataSource, UITableViewDelegate{
                 print("$1")
                 self.alertcontroller.dismiss(animated: true, completion: nil)
                 //TODO: To next page
+                self.performSegue(withIdentifier: "ToARGame", sender: self)
             }else if(self.waitcheck && !Waitt){
                 print("$5")
                 self.alertcontroller.dismiss(animated: true, completion: nil)
@@ -66,6 +67,7 @@ class UserTable: UIViewController ,UITableViewDataSource, UITableViewDelegate{
                     title: "確認", style: .default, handler: {(action: UIAlertAction!) -> Void in
                         self.ref.child("UserList").child(connecter).updateChildValues(["Connecter":self.Username, "ConnectState": true])
                         //TODO: To next page
+                        self.performSegue(withIdentifier: "ToARGame", sender: self)
                     })
                     let refbut = UIAlertAction(
                         title: "拒絕", style: .default, handler: {(action: UIAlertAction!) -> Void in

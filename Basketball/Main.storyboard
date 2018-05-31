@@ -105,6 +105,7 @@
                     </view>
                     <connections>
                         <outlet property="usertableview" destination="YYn-V8-SOh" id="MLE-Kr-Pqk"/>
+                        <segue destination="fGH-GV-xh7" kind="modal" identifier="ToARGame" id="AjD-f5-cBZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S9y-Xx-sde" userLabel="First Responder" sceneMemberID="firstResponder"/>
