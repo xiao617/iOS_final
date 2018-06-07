@@ -7,74 +7,67 @@
 //
 
 import UIKit
-import SceneKit
-import ARKit
-
-class ViewController: UIViewController, ARSCNViewDelegate {
-
-    @IBOutlet var sceneView: ARSCNView!
+import FirebaseDatabase
+import FirebaseStorage
+class ViewController: UIViewController {
+    @IBOutlet var Enter: UIButton!
+    @IBOutlet var UserEnterName: UITextField!
+    //Firebase Databasse
+    var ref: DatabaseReference!
+    
+    //store firebase data
+    var UserName: String?
+    var UserInFirebase = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
         
-        // Set the view's delegate
-        sceneView.delegate = self
+        //Firebase Database
+        ref = Database.database().reference()
+        //initDatabase()
         
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        ref.child("UserName").observe( .value , with: { (Snapshot) in
+            let vv = Snapshot.value as! NSDictionary
+            self.UserInFirebase = vv["Name"] as? [String] ?? [String]()
+            //print("usf",self.UserInFirebase.count,self.UserInFirebase)
+        })
     }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        // Create a session configuration
-        let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
-        sceneView.session.run(configuration)
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        
-        // Pause the view's session
-        sceneView.session.pause()
-    }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
-
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
-    }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
+    func initDatabase() {
+        let UploadUserData = ["Character": 0, "ConnectState": true, "Connecter": "" , "Waiting": false,"winOrloss":0,"forceVectorX":0,"forceVectorY":0,"forceVectorZ":0,"positionVectorX":0,"positionVectorY":0,"positionVectorZ":0] as [String : Any]
         
+        //Upload User Data to Firebase
+        ref.child("UserList").child("Default").setValue(UploadUserData)
+        /*
+         ref.child("UserName").observeSingleEvent(of: .value , with: { (Snapshot) in
+         let vv = Snapshot.value as! NSDictionary
+         self.UserInFirebase = vv["Name"] as? [String] ?? [String]()
+         print("usf",self.UserInFirebase.count)
+         })
+         */
+        ref.child("UserName").setValue(["Name":["Default"] ])
     }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
+    @IBAction func SendUserData (_ sender: UIButton) {
+        //Get Username from TextField
+        UserName = UserEnterName.text
         
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
+        //Use dict to save info
+        let UploadUserData = ["Character": 0, "ConnectState": true, "Connecter": "" , "Waiting": false,"winOrloss":0,"forceVectorX":0,"forceVectorY":0,"forceVectorZ":0,"positionVectorX":0,"positionVectorY":0,"positionVectorZ":0] as [String : Any]
         
+        //Upload User Data to Firebase
+        ref.child("UserList").child(UserName!).setValue(UploadUserData)
+        
+        
+        
+        UserInFirebase.append(UserName!)
+        //print("uF",UserInFirebase)
+        ref.child("UserName").updateChildValues(["Name":UserInFirebase])
+        
+        
+        UserDefaults.standard.set(UserName , forKey:"UserName")
     }
 }

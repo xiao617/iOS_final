@@ -1,0 +1,6 @@
+framework module Pods_Pikachu_VolleyBallTests {
+  umbrella header "Pods-Pikachu_VolleyBallTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
