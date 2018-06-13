@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,74 +16,118 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="Pikachu_VolleyBall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXo-Bp-7BA">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Oec-9E-g2c">
-                                <rect key="frame" x="139" y="240" width="97" height="30"/>
+                                <rect key="frame" x="142" y="274" width="131" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="Textfieldcg:" destination="BV1-FR-VrT" eventType="editingChanged" id="194-74-Xjr"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFK-tf-sA5">
-                                <rect key="frame" x="86" y="173" width="237" height="45"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="請輸入你的名字" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AFK-tf-sA5">
+                                <rect key="frame" x="108" y="199" width="198.66666666666663" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68B-va-kAP">
-                                <rect key="frame" x="169" y="304" width="37" height="30"/>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg1.png" translatesAutoresizingMaskIntoConstraints="NO" id="726-E9-Zzu">
+                                <rect key="frame" x="79" y="432" width="256" height="239"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Enter"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="皮卡丘點排球" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nhQ-cS-YhI">
+                                <rect key="frame" x="0.0" y="91" width="414" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrZ-15-VlQ">
+                                <rect key="frame" x="142" y="316" width="131" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="68B-va-kAP">
+                                <rect key="frame" x="181" y="345" width="52" height="46"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                </accessibility>
+                                <state key="normal" image="enter.png"/>
                                 <connections>
                                     <action selector="SendUserData:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Yh-rR-ywO"/>
                                     <segue destination="esA-Lg-ITl" kind="showDetail" id="zI9-6m-udN"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98053067920000003" green="0.85430175070000003" blue="0.032483950259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" image="YES"/>
+                        </accessibility>
                         <viewLayoutGuide key="safeArea" id="Yvl-ho-SxG"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8vb-c5-1Eo"/>
                     <connections>
                         <outlet property="Enter" destination="68B-va-kAP" id="fqx-uc-0gK"/>
                         <outlet property="UserEnterName" destination="Oec-9E-g2c" id="YLJ-VQ-9di"/>
+                        <outlet property="warningfield" destination="vrZ-15-VlQ" id="5my-Tu-B55"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="100.29985007496252"/>
+            <point key="canvasLocation" x="117.39130434782609" y="100.2717391304348"/>
         </scene>
         <!--Table View-->
         <scene sceneID="i3A-Ev-AvL">
             <objects>
                 <viewController id="esA-Lg-ITl" customClass="TableView" customModule="Pikachu_VolleyBall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bEL-tJ-8WR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="31I-jQ-oM8">
-                                <rect key="frame" x="0.0" y="81" width="375" height="586"/>
+                                <rect key="frame" x="0.0" y="102" width="414" height="634"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" red="0.98053067922592163" green="0.53423216977537036" blue="0.12596343073522534" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.98053067920000003" green="0.85430175070000003" blue="0.032483950259999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="W9m-Oc-gYL">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W9m-Oc-gYL" id="2RX-Yq-cvw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.666666666666664"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.98053067922592163" green="0.85430175065994263" blue="0.032483950257301331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="皮卡丘點排球" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gnY-qe-dkI">
+                                <rect key="frame" x="20" y="40" width="375" height="48"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="6Bx-C2-BDf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.98053067922592163" green="0.85430175065994263" blue="0.032483950257301331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="31I-jQ-oM8" firstAttribute="leading" secondItem="uyw-6p-owU" secondAttribute="leading" id="8Ds-6n-rjz"/>
-                            <constraint firstItem="uyw-6p-owU" firstAttribute="trailing" secondItem="31I-jQ-oM8" secondAttribute="trailing" id="KcC-Q0-D3U"/>
-                            <constraint firstItem="uyw-6p-owU" firstAttribute="bottom" secondItem="31I-jQ-oM8" secondAttribute="bottom" id="RmC-tX-GLj"/>
-                            <constraint firstItem="31I-jQ-oM8" firstAttribute="top" secondItem="uyw-6p-owU" secondAttribute="top" constant="61" id="cDO-Zt-fgf"/>
+                            <constraint firstItem="gnY-qe-dkI" firstAttribute="top" secondItem="uyw-6p-owU" secondAttribute="top" constant="20" id="0ZA-Cc-TQK"/>
+                            <constraint firstItem="31I-jQ-oM8" firstAttribute="top" secondItem="gnY-qe-dkI" secondAttribute="bottom" constant="14" id="6H2-5y-4u5"/>
+                            <constraint firstAttribute="trailing" secondItem="31I-jQ-oM8" secondAttribute="trailing" id="CCT-Dn-cOb"/>
+                            <constraint firstItem="31I-jQ-oM8" firstAttribute="leading" secondItem="bEL-tJ-8WR" secondAttribute="leading" id="J5u-iD-WqV"/>
+                            <constraint firstItem="31I-jQ-oM8" firstAttribute="bottom" secondItem="uyw-6p-owU" secondAttribute="bottom" id="WFD-by-k7p"/>
+                            <constraint firstItem="gnY-qe-dkI" firstAttribute="centerX" secondItem="31I-jQ-oM8" secondAttribute="centerX" id="dNI-54-kkN"/>
+                            <constraint firstItem="gnY-qe-dkI" firstAttribute="leading" secondItem="bEL-tJ-8WR" secondAttribute="leadingMargin" id="elM-ng-4cA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uyw-6p-owU"/>
                     </view>
@@ -93,22 +138,66 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="27P-aL-zpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="925.60000000000002" y="99.400299850074973"/>
+            <point key="canvasLocation" x="924.63768115942037" y="98.641304347826093"/>
         </scene>
         <!--View-->
         <scene sceneID="4fD-Jw-QXy">
             <objects>
                 <viewController id="blX-jO-EiP" customClass="ARView" customModule="Pikachu_VolleyBall" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aOM-LE-bEy">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P3a-QA-oaA">
+                                <rect key="frame" x="92" y="232" width="190" height="182"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pikachu.jpeg"/>
+                                <connections>
+                                    <action selector="b1chosn" destination="blX-jO-EiP" eventType="touchUpInside" id="LTY-ZB-AX9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cdx-Gz-dNI">
+                                <rect key="frame" x="120" y="476" width="135" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="pokeball.jpg"/>
+                                <connections>
+                                    <action selector="b2chosen" destination="blX-jO-EiP" eventType="touchUpInside" id="EeA-2v-ccU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="皮卡丘點排球" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nhr-rh-XZh">
+                                <rect key="frame" x="0.0" y="40" width="375" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kzn-qd-Npo">
+                                <rect key="frame" x="16" y="126" width="343" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="0fY-1c-Ql0"/>
                     </view>
+                    <connections>
+                        <outlet property="areaques" destination="kzn-qd-Npo" id="5C4-pr-IvU"/>
+                        <outlet property="b1" destination="P3a-QA-oaA" id="hBF-hX-LFH"/>
+                        <outlet property="b2" destination="Cdx-Gz-dNI" id="V89-h6-Vcz"/>
+                        <segue destination="BV1-FR-VrT" kind="modal" identifier="ToMain" id="dGK-S0-fFw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q12-hV-Kdj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1757" y="99"/>
+            <point key="canvasLocation" x="1756" y="98.50074962518741"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="bg1.png" width="256" height="256"/>
+        <image name="enter.png" width="64" height="64"/>
+        <image name="pikachu.jpeg" width="333" height="333"/>
+        <image name="pokeball.jpg" width="500" height="500"/>
+    </resources>
 </document>

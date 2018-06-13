@@ -127,6 +127,7 @@ class TableView: UIViewController,UITableViewDataSource,UITableViewDelegate {
             //self.username = vv["Name"] as! [String] ?? [String]()
             let totalnum = tuser.count - 1
             var count = 0
+            self.username = []
             for name in tuser{
                 print("---$$",name)
                 if(name == "Default" || name == self.Username){

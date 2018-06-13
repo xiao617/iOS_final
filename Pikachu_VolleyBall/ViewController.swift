@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     var UserName: String?
     var UserInFirebase = [String]()
     
+    @IBOutlet var warningfield: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         ref = Database.database().reference()
@@ -32,13 +33,33 @@ class ViewController: UIViewController {
             self.UserInFirebase = vv["Name"] as? [String] ?? [String]()
             //print("usf",self.UserInFirebase.count,self.UserInFirebase)
         })
+        Enter.isEnabled = false
+        
+    }
+    @IBAction func Textfieldcg(_ sender: Any) {
+        //Get Username from TextField
+        UserName = UserEnterName.text
+        
+        Enter.isEnabled = false
+        if(UserName == ""){
+            warningfield.text = "此欄位不得空白"
+        }
+        else if(self.UserInFirebase.contains(UserName!)){
+            warningfield.text = "此暱稱已被使用"
+            Enter.isEnabled = false
+        }
+        else{
+            warningfield.text = "此暱稱可使用"
+            Enter.isEnabled = true
+            
+        }
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Release any cached data, images, etc that aren't in use.
     }
     func initDatabase() {
-        let UploadUserData = ["Character": 0, "ConnectState": true, "Connecter": "" , "Waiting": false,"winOrloss":0,"forceVectorX":0,"forceVectorY":0,"forceVectorZ":0,"positionVectorX":0,"positionVectorY":0,"positionVectorZ":0] as [String : Any]
+        let UploadUserData = ["Character": 0, "ConnectState": true, "Connecter": "" , "Waiting": false,"done":false] as [String : Any]
         
         //Upload User Data to Firebase
         ref.child("UserList").child("Default").setValue(UploadUserData)
@@ -53,10 +74,10 @@ class ViewController: UIViewController {
     }
     @IBAction func SendUserData (_ sender: UIButton) {
         //Get Username from TextField
-        UserName = UserEnterName.text
+        //UserName = UserEnterName.text
         
         //Use dict to save info
-        let UploadUserData = ["Character": 0, "ConnectState": true, "Connecter": "" , "Waiting": false,"winOrloss":0,"forceVectorX":0,"forceVectorY":0,"forceVectorZ":0,"positionVectorX":0,"positionVectorY":0,"positionVectorZ":0] as [String : Any]
+        let UploadUserData = ["Character": 0, "ConnectState": false, "Connecter": "" , "Waiting": false,"done":false] as [String : Any]
         
         //Upload User Data to Firebase
         ref.child("UserList").child(UserName!).setValue(UploadUserData)
